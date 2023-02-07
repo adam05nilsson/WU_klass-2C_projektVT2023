@@ -1,0 +1,96 @@
+*{   padding: 0;
+    margin:0;
+    box-sizing: border-box;}
+
+#indexGridWrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1frf;
+    grid-template-rows: 10vh 90vh;
+    grid-template-areas: 
+    "heI heI heI heI heI heI heI naI"
+    "arI arI arI arI arI arI arI arI"
+    ;
+}
+
+header{
+    display: flex;
+    grid-area: heI;
+    background-color: rgb(36, 110, 141);
+}
+
+nav{
+    display: flex;
+    grid-area: naI;
+    background-color: rgb(36, 110, 141);
+    justify-content: flex-end;
+    align-items: center;
+
+}
+
+article{
+    display: flex;
+    grid-area: arI;
+    background-color:white;
+}
+
+#burger{
+
+    margin-right: 25px;
+
+
+}
+
+
+#burger div{
+    width: 30px;
+    height: 3.5px;
+    background-color: white;
+    margin: 5px;
+    border-radius: 2px;
+}
+
+#linkList{
+    display: flex;
+    top: -350px;
+    position: absolute;
+    height:350px;
+    width:100px;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    background-color: rgb(36, 110, 141);;   
+}
+
+
+#linkList a{
+    text-decoration: none;
+
+    color: white;
+    letter-spacing: 0.1rem;
+    font-weight: bold;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+.linkListVisible{
+    transform: translateY(400px);
+}
+
+.burgerInXForm #burgerLine1{
+   transform: rotate(-45deg) translate(-5px, 6px);
+   transition: all, 0.5s;
+}
+ 
+
+.burgerInXForm  #burgerLine2{
+    opacity: 0;
+}
+
+
+.burgerInXForm  #burgerLine3{
+    transform: rotate(45deg) translate(-5px, -6px);
+    transition: all, 0.5s;
+
+}
+
