@@ -1,51 +1,76 @@
-*{   padding: 0;
+*{  padding: 0;
     margin:0;
     box-sizing: border-box;}
 
+body{background-color:  rgb(13, 56, 74);}
+
 #indexGridWrapper{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1frf;
-    grid-template-rows: 10vh 90vh;
+    grid-template-columns: 7fr 1fr;
+    grid-template-rows: 10vh 60vh 40vh;
     grid-template-areas: 
-    "heI heI heI heI heI heI heI naI"
-    "arI arI arI arI arI arI arI arI"
-    ;
+    "heI naI"
+    "ar1I ar1I"
+    "ar2I ar2I";
 }
 
 header{
     display: flex;
     grid-area: heI;
-    background-color: rgb(36, 110, 141);
+    background-color: rgb(13, 56, 74);
+    align-items: center;
+}
+
+#companyTitle{
+    margin-left: 20px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 25px;
 }
 
 nav{
     display: flex;
     grid-area: naI;
-    background-color: rgb(36, 110, 141);
+    background-color: rgb(13, 56, 74);
     justify-content: flex-end;
     align-items: center;
 
 }
 
-article{
+#frontArticleWithPicture{
     display: flex;
-    grid-area: arI;
-    background-color:white;
+    grid-area: ar1I;
+    align-items: center;
+    justify-content: center;
+    background-color: (36, 110, 141);
+    z-index: 0;
+
 }
 
+#frontPicture{
+    filter: blur(5px);
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#frontQuote{
+    color: white;
+    position: absolute;
+    font-size: 20px;
+}
+
+
 #burger{
-
     margin-right: 25px;
-
-
 }
 
 
 #burger div{
-    width: 30px;
-    height: 3.5px;
+    width: 25px;
+    height: 2px;
     background-color: white;
-    margin: 5px;
+    margin: 6px;
     border-radius: 2px;
 }
 
@@ -59,17 +84,17 @@ article{
     justify-content: space-around;
     align-items: center;
     list-style: none;
-    background-color: rgb(36, 110, 141);;   
+    background-color: rgb(13, 56, 74);
+    z-index: 1;
 }
 
 
 #linkList a{
     text-decoration: none;
-
     color: white;
     letter-spacing: 0.1rem;
     font-weight: bold;
-    font-size: 10px;
+    font-size: 15px;
     text-transform: uppercase;
 }
 
@@ -94,3 +119,43 @@ article{
 
 }
 
+@media screen and ( min-width: 600px){
+
+    #burger{
+        display: none;
+    }
+
+    #indexGridWrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 15vh 105vh 100vh;
+        grid-template-areas: 
+        "heI heI naI naI naI naI"
+        "ar1I ar1I ar1I ar1I ar1I ar1I"
+        "ts ts ts ts ts ts"
+        ;
+    }
+
+    #linkList{
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        top: 0;
+        height: 15vh;
+        width: 75%;
+        z-index: 0;
+    }
+
+    #linkList a{     
+        font-size: 22px;
+    }
+
+    #frontQuote{
+        font-size: 50px;
+    }
+
+    #companyTitle{
+        margin-left: 40px;
+        font-size: 35px;
+    }
+}
