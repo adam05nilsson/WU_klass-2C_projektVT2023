@@ -9,7 +9,7 @@ body{background-color:  rgb(12, 43, 56);}
     grid-template-columns: 7fr 1fr;
     grid-template-rows: 10vh 60vh 70vh 70vh 70vh;
     grid-template-areas: 
-    "heI naI"
+    "he na"
     "ar1I ar1I"
     "ar2I ar2I"
     "ar3I ar3I"
@@ -18,13 +18,13 @@ body{background-color:  rgb(12, 43, 56);}
 
 header{
     display: flex;
-    grid-area: heI;
-    background-color: rgb(13, 56, 74);
+    grid-area: he;
+    background-color: rgb(13, 56, 74); 
     align-items: center;
+    justify-content: center;
 }
 
 #companyTitle{
-    margin-left: 20px;
     color: white;
     text-transform: uppercase;
     font-size: 25px;
@@ -32,10 +32,11 @@ header{
 
 nav{
     display: flex;
-    grid-area: naI;
+    grid-area: na;
     background-color: rgb(13, 56, 74);
-    justify-content: flex-end;
     align-items: center;
+    justify-content: flex-end;
+
 
 }
 
@@ -91,10 +92,15 @@ nav{
 #ourTeamGridWrapper{
     display: grid;
     grid-template-columns: 7fr 1fr;
-    grid-template-rows: 10vh 7vh 20vh;
+    grid-template-rows: 10vh 7vh 120vh 140vh 140vh 140vh 140vh;
     grid-template-areas: 
-    "heI naI"
+    "he na"
     "oths oths"
+    "ota1 ota1"
+    "ota2 ota2"
+    "ota3 ota3"
+    "ota4 ota4"
+    "ota5 ota5"
     ;
 }
 
@@ -114,11 +120,72 @@ h2{
     
 }
 
+#ourTeamArticle1{
+    grid-area: ota1;
+}
 
+#ourTeamArticle2{
+    grid-area: ota2;
+}
 
+#ourTeamArticle3{
+    grid-area: ota3;
+}
+
+#ourTeamArticle4{
+    grid-area: ota4;
+}
+
+#ourTeamArticle5{
+    grid-area: ota5;
+}
+
+.ourTeamArticles{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#ourTeamPicture1{
+    background-image: url(../img/picture_of_adam_nilsson.jpg);
+}
+
+#ourTeamPicture2{
+    background-image: url(../img/picture_of_james_olsson.jpg);
+}
+
+#ourTeamPicture3{
+    background-image: url(../img/picture_of_carl_brooker.jpg);
+}
+
+#ourTeamPicture4{
+    background-image: url(../img/picture_of_axel_breitholtz.jpg);
+}
+
+#ourTeamPicture5{
+    background-image: url(../img/picture_of_marius_dahlbom.jpg);
+}
+
+.ourTeamPictures{
+    width: 90%;
+    height: 50%;
+    background-size:cover;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+.nameTitlesDescription{
+    width: 90%;
+    height:50%;
+    background-color: rgb(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
 
 #burger{
     margin-right: 25px;
+    z-index: 1;
 }
 
 #burger div{
@@ -131,16 +198,17 @@ h2{
 
 #linkList{
     display: flex;
-    top: -350px;
+    top: -100%;
     position: absolute;
-    height:350px;
-    width:100px;
+    height:100%;
+    width: 100%;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     list-style: none;
-    background-color: rgb(13, 56, 74);
+    background-color: rgb(13, 56, 74, 0.99);
     z-index: 1;
+    transition: 0.5s;
 }
 
 #linkList a{
@@ -153,7 +221,7 @@ h2{
 }
 
 .linkListVisible{
-    transform: translateY(400px);
+    transform: translateY(100%);
 }
 
 .burgerInXForm #burgerLine1{
@@ -171,7 +239,7 @@ h2{
 
 }
 
-@media screen and ( min-width: 600px){
+@media screen and ( min-width: 700px){
 
     #burger{
         display: none;
@@ -182,7 +250,7 @@ h2{
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-rows: 15vh 105vh 90vh;
         grid-template-areas: 
-        "heI heI naI naI naI naI"
+        "he he na na na na"
         "ar1I ar1I ar1I ar1I ar1I ar1I"
         "ar2I ar2I ar3I ar3I ar4I ar4I"
         ;
@@ -193,8 +261,8 @@ h2{
         flex-direction: row;
         top: 0;
         height: 15vh;
-        width: 75%;
         z-index: 0;
+        position:static;
     }
 
     #linkList a{     
@@ -205,7 +273,16 @@ h2{
         font-size: 50px;
     }
 
-    #companyTitle{
-        margin-left: 40px;
+    #ourTeamGridWrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 15vh 20vh 140vh 140vh;
+        grid-template-areas: 
+        "he he na na na na"
+        "oths oths oths oths oths oths"
+        "ota1 ota1 ota2 ota2 ota3 ota3"
+        "ota4 ota4 ota5 ota5 .. .."
+        ;
     }
 }
+
