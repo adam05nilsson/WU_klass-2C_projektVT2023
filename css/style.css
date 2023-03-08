@@ -140,6 +140,18 @@ h2{
     grid-area: ota5;
 }
 
+#ourTeamArticle6{
+    grid-area: ota6;
+}
+
+#ourTeamArticle7{
+    grid-area: ota7;
+}
+
+#ourTeamArticle8{
+    grid-area: ota8;
+}
+
 .ourTeamArticles{
     display: flex;
     align-items: center;
@@ -147,7 +159,7 @@ h2{
 }
 
 #ourTeamPicture1{
-    background-image: url(../img/picture_of_adam_nilsson.jpg);
+    background-image: url(../img/picture_of_adam_nilsson_2.jpg);
 }
 
 #ourTeamPicture2{
@@ -166,6 +178,18 @@ h2{
     background-image: url(../img/picture_of_marius_dahlbom.jpg);
 }
 
+#ourTeamPicture6{
+    background-image: url(../img/picture_of_matilda_bloom.jpg);
+}
+
+#ourTeamPicture7{
+    background-image: url(../img/picture_of_wilmer_erixon.jpg);
+}
+
+#ourTeamPicture8{
+    background-image: url(../img/picture_of_ebba_idmyr.jpg);
+}
+
 .ourTeamPictures{
     width: 90%;
     height: 50%;
@@ -181,6 +205,11 @@ h2{
     display: flex;
     align-items: center;
     flex-direction: column;
+}
+
+.nameTitlesDescription h2{ 
+    margin-top: 5%;
+    width: 90%;
 }
 
 #burger{
@@ -276,12 +305,13 @@ h2{
     #ourTeamGridWrapper{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 15vh 20vh 140vh 140vh;
+        grid-template-rows: 15vh 20vh 160vh 160vh 160vh;
         grid-template-areas: 
         "he he na na na na"
         "oths oths oths oths oths oths"
         "ota1 ota1 ota2 ota2 ota3 ota3"
-        "ota4 ota4 ota5 ota5 .. .."
+        "ota4 ota4 ota5 ota5 ota6 ota6"
+        "ota7 ota7 ota8 ota8 .. .."
         ;
     }
 }
