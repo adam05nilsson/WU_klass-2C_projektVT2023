@@ -5,6 +5,10 @@
     scrollbar-width: none;  /* Firefox */
 }
 
+p{
+    color: white;
+}
+
 *::-webkit-scrollbar {
     display: none;
 }
@@ -80,8 +84,8 @@ nav{
 .landingArticleDarkBox{
     width: 80%;
     height: 80%;
-    background-color: black;
-    opacity: 0.2;
+    background-color:rgb(0, 0, 0, 0.2);
+    border: solid white 2px;
 }
 
 
@@ -232,6 +236,7 @@ h2{
     display: flex;
     align-items: center;
     flex-direction: column;
+    border: solid white 2px;
 }
 
 .nameTitlesDescription h2{ 
@@ -254,6 +259,7 @@ h2{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    border: solid white 2px;
 }
 
 #boxForAreYouNext h2{
@@ -270,26 +276,36 @@ h2{
     z-index: 1;
 }
 
+/* code for Our Vision*/
+
 #ourVisionGridWrapper{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 15vh 90vh 90vh;
+    grid-template-rows: 15vh 90vh 10vh 105vh 5vh 105vh 50vh;
     grid-template-areas: 
     "he he na na na na"
     "ova1 ova1 ova1 ova1 ova1 ova1"
     ".. .. .. .. .. .."
+    "ova2 ova2 ova2 ova3 ova3 ova3"
+    ".. .. .. .. .. .."
+    "ova4 ova4 ova4 ova5 ova5 ova5"
+    "ova6 ova6 ova6 ova6 ova6 voa6"
     ;
 }
 
-#ourVisionArticle1{
-    grid-area: ova1;
+.ourVisionArticles{
     display: flex;
     justify-content: center;
     align-items: center;
 
 }
 
-    #ourVisionPicture1{
+#ourVisionArticle1{
+    grid-area: ova1;
+
+}
+
+#ourVisionPicture1{
         background-image: url(../img/picture_of_skyline.jpg);
         filter: blur(4px);
         width: 100%;
@@ -303,6 +319,72 @@ h2{
     background-color: rgb(13, 56, 74,0.5)
 }
 
+#ourVisionArticle2{
+    grid-area: ova2;
+}
+
+#ourVisionpicture2{
+    background-image: url(../img/picture_of_people_in_scycraper.jpg);
+    background-size: cover;
+    border: none;
+    background-position-x: -200px;
+}
+.ourVisionBoxes{
+    width:85%;
+    height: 90%;
+    background-color: rgb(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: solid white 2px;
+}
+
+.ourVisionBoxes p{
+    margin-top: 5%;
+    width:75%;
+    font-size: 20px;
+}
+
+.ourVisionBoxes h2{
+    margin-top: 7% ;
+    font-size: 32px;
+}
+
+#ourVisionArticle3{
+    grid-area: ova3;
+}
+
+#ourVisionArticle4{
+    grid-area: ova4;
+}
+
+#ourVisionArticle5{
+    grid-area: ova5;
+}
+
+#ourVisionPicture3{
+    background-image: url(../img/picture_of_people_in_class.jpg);
+    border: none;
+}
+
+#ourVisionArticle6{
+    grid-area: ova6;
+}
+
+#ourVisionSummerCampBox{
+    width: 15%;
+    height: 16%;
+    background-color: rgb(0, 0, 0, 0.2);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border: solid 2px white;
+    margin-left: 3%;
+}
+
+#summerCampHeading{
+    font-size: 45px;
+}
 
 
 #burger div{
