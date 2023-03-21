@@ -22,13 +22,14 @@ body{
 #landingGridWrapper{
     display: grid;
     grid-template-columns: 7fr 1fr;
-    grid-template-rows: 10vh 60vh 70vh 70vh 70vh;
+    grid-template-rows: 10vh 70vh 70vh 70vh 70vh 10vh;
     grid-template-areas: 
     "he na"
     "ar1I ar1I"
     "ar2I ar2I"
     "ar3I ar3I"
-    "ar4I ar4I";
+    "ar4I ar4I"
+    "fo fo";
     
 }
 
@@ -38,6 +39,12 @@ header{
     background-color: rgb(13, 56, 74); 
     align-items: center;
     justify-content: center;
+}
+
+footer{
+    grid-area: fo;
+    background-color: rgb(13, 56, 74);
+    z-index: 8;
 }
 
 #companyTitle{
@@ -106,7 +113,7 @@ nav{
 #ourTeamGridWrapper{
     display: grid;
     grid-template-columns: 7fr 1fr;
-    grid-template-rows: 10vh 10vh 80vh 5vh 80vh 5vh 80vh 5vh 80vh 5vh 80vh 5vh 80vh 5vh 80vh 5vh 80vh 30vh;
+    grid-template-rows: 10vh 10vh 80vh 5vh 80vh 5vh 80vh 5vh 80vh 5vh 80vh 5vh 80vh 5vh 80vh 5vh 80vh 30vh 10vh;
     grid-template-areas:    
     "he na"
     "oths oths"
@@ -126,7 +133,8 @@ nav{
     ".. .."
     "ota8 ota8"
     "ota9 ota9"
-    ;
+    "fo fo";
+    
 }
 
 h2{
@@ -226,6 +234,7 @@ h2{
     height: 60%;
     background-size:cover;
     margin-bottom: 5%;
+    background-position: center;
 }
 
 
@@ -280,16 +289,17 @@ h2{
 
 #ourVisionGridWrapper{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 15vh 90vh 10vh 105vh 5vh 105vh 50vh;
+    grid-template-columns: 7fr 1fr;
+    grid-template-rows: 10vh 70vh 90vh 60vh 90vh 60vh 25vh 15vh;
     grid-template-areas: 
-    "he he na na na na"
-    "ova1 ova1 ova1 ova1 ova1 ova1"
-    ".. .. .. .. .. .."
-    "ova2 ova2 ova2 ova3 ova3 ova3"
-    ".. .. .. .. .. .."
-    "ova4 ova4 ova4 ova5 ova5 ova5"
-    "ova6 ova6 ova6 ova6 ova6 voa6"
+    "he na"
+    "ova1 ova1"
+    "ova2 ova2"
+    "ova3 ova3"
+    "ova4 ova4"
+    "ova5 ova5"
+    "ova7 ova7" 
+    "fo fo"
     ;
 }
 
@@ -311,6 +321,7 @@ h2{
         width: 100%;
         height: 100%;
         background-size: cover;
+        background-position-x: -100px;
     }
 
 #ourVisionTitle{
@@ -342,12 +353,12 @@ h2{
 .ourVisionBoxes p{
     margin-top: 5%;
     width:75%;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .ourVisionBoxes h2{
     margin-top: 7% ;
-    font-size: 32px;
+    font-size: 29px;
 }
 
 #ourVisionArticle3{
@@ -360,7 +371,9 @@ h2{
 
 #ourVisionArticle5{
     grid-area: ova5;
+    margin-bottom: -5%;
 }
+
 
 #ourVisionPicture3{
     background-image: url(../img/picture_of_people_in_class.jpg);
@@ -368,22 +381,56 @@ h2{
 }
 
 #ourVisionArticle6{
+    display: flex;
     grid-area: ova6;
+    width: 0%;
+    height: 0%;
+    position:absolute;
+    top: -200px
+
+}
+
+#ourVisionArticle7{
+    grid-area: ova7;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ourVisionsummerCampPictures{
+    width: 90%;
+    height: 27%;
+    border: solid 2px white;
+}
+
+#ourVisionPicture4{
+    background-image: url(../img/picture_of_teens_walking_on_campus.jpg);
+    background-position-x: -100px;
+}
+#ourVisionPicture5{
+    background-image: url(../img/picture_of_teen_pitching.jpg);
+    background-position: -245px;
+
+}
+#ourVisionPicture6{
+    background-image: url(../img/picture_of_group_of_teens.jpg);
+    background-position: center;
+
 }
 
 #ourVisionSummerCampBox{
-    width: 15%;
-    height: 16%;
     background-color: rgb(0, 0, 0, 0.2);
     justify-content: center;
     align-items: center;
     display: flex;
     border: solid 2px white;
-    margin-left: 3%;
+    width: 33%;
+    height: 16%;
 }
 
 #summerCampHeading{
-    font-size: 45px;
+    font-size: 30px;
+    margin-bottom: 5%;
 }
 
 
@@ -447,11 +494,12 @@ h2{
     #landingGridWrapper{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 15vh 105vh 90vh;
+        grid-template-rows: 15vh 105vh 90vh 25vh;
         grid-template-areas: 
         "he he na na na na"
         "ar1I ar1I ar1I ar1I ar1I ar1I"
         "ar2I ar2I ar3I ar3I ar4I ar4I"
+        "fo fo fo fo fo fo"
         ;
     }
 
@@ -476,7 +524,7 @@ h2{
     #ourTeamGridWrapper{
         display: grid;
         grid-template-columns: minmax(350px,1fr) minmax(350px,1fr) minmax(350px,1fr) ;
-        grid-template-rows: 15vh 20vh 120vh 5vh 120vh 5vh 120vh;
+        grid-template-rows: 15vh 20vh 120vh 5vh 120vh 5vh 120vh 25vh;
         grid-template-areas: 
         "he na na"
         " oths oths oths"
@@ -485,6 +533,7 @@ h2{
         "ota4  ota5   ota6"
         ".. .. .. "
         "ota7  ota8  ota9"
+        "fo fo fo"
         ;
     }
 
@@ -510,5 +559,76 @@ h2{
     #boxForAreYouNext p{
         color: white;
     }
+
+    #ourVisionGridWrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 15vh 90vh 10vh 105vh 5vh 105vh 5vh 85vh 50vh 25vh;
+        grid-template-areas: 
+        "he he na na na na"
+        "ova1 ova1 ova1 ova1 ova1 ova1"
+        ".. .. .. .. .. .."
+        "ova2 ova2 ova2 ova3 ova3 ova3"
+        ".. .. .. .. .. .."
+        "ova4 ova4 ova4 ova5 ova5 ova5"
+        ".. .. .. .. .. .."
+        "ova6 ova6 ova6 ova6 ova6 ova6"
+        "ova7 ova7 ova7 ova7 ova7 ova7" 
+        "fo fo fo fo fo fo"
+        ;
+    }
+
+    #ourVisionPicture1{
+        background-image: url(../img/picture_of_skyline.jpg);
+        filter: blur(4px);
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position-x: 0%;
+    }
+
+    .ourVisionBoxes p{
+        font-size: 20px;
+    }
+
+    
+    .ourVisionBoxes h2{
+        font-size: 32px;
+    }
+
+    #ourVisionArticle6{
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        height: 100%;
+        position: static;
+    }
+
+    #ourVisionArticle5{
+        margin-bottom: 0%;
+    }
+
+
+    #ourVisionArticle7{
+        flex-direction: row;
+    }
+
+    .ourVisionsummerCampPictures{
+        width: 27%;
+        height: 90%;
+    }
+
+    #ourVisionSummerCampBox{
+        width: 15%;
+        height: 16%;
+        margin-left: 3%;
+    }
+
+    #summerCampHeading{
+        font-size: 45px;
+        margin-bottom: 0;
+    }
+    
+    
 }
 
