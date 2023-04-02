@@ -702,7 +702,7 @@ h3{
     #landingGridWrapper{
         display: grid;
         grid-template-columns: minmax(360px,1fr) minmax(360px,1fr) minmax(360px,1fr);
-        grid-template-rows: 15vh 105vh 15vh 90vh 10vh 22vh;
+        grid-template-rows: 15vh 105vh 15vh 90vh 10vh 20vh;
         grid-template-areas: 
         "he na na"
         "ar1I ar1I ar1I"
