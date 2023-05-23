@@ -3,10 +3,13 @@
     box-sizing: border-box;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
+    resize: none;
 }
 
 p{
-    color: white;
+    color: rgb(227, 227, 227);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
 }
 
 *::-webkit-scrollbar {
@@ -23,12 +26,17 @@ p{
 body{
     background-color:  rgb(12, 43, 56); 
 }
+
+.underHeaders{
+    color: rgb(180, 238, 241);
+}
+
   
 
 #landingGridWrapper{
     display: grid;
     grid-template-columns: 7fr 1fr;
-    grid-template-rows: 10vh 70vh 15vh 60vh 60vh 60vh 5vh 20vh;
+    grid-template-rows: 80px 420px 90px 370px 370px 370px 40px 145px;
     grid-template-areas: 
     "he na"
     "ar1I ar1I"
@@ -37,15 +45,16 @@ body{
     "ar3I ar3I"
     "ar4I ar4I"
     ".. .."
-    "fo fo";
-    
+    "fo fo"; 
 }
 
 header{
     grid-area: he;
     background-color: rgb(13, 56, 74);
-    background-color: rgb(13, 56, 74);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+
 }
+
 
 #logo{
 
@@ -59,6 +68,7 @@ footer{
     background-color: rgb(13, 56, 74);
     z-index: 1;
     flex-direction: column;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
 #footerSection1{
@@ -182,7 +192,7 @@ nav{
 #ourTeamGridWrapper{
     display: grid;
     grid-template-columns: 7fr 1fr;
-    grid-template-rows: 10vh 10vh 85vh 10vh 85vh 10vh 85vh 10vh 85vh 10vh 85vh 10vh 85vh 10vh 85vh 10vh 85vh 30vh 20vh;
+    grid-template-rows: 70px 60px 700px 60px 700px 60px 700px 60px 700px 60px 700px 60px 700px 60px 700px 60px 700px 250px 145px;
     grid-template-areas:    
     "he na"
     "oths oths"
@@ -203,6 +213,7 @@ nav{
     "ota8 ota8"
     "ota9 ota9"
     "fo fo";
+    ;
     
 }
 
@@ -325,7 +336,6 @@ h3{
 }
 
 .nameTitlesDescription p{
-    color: white;
     margin-top: 5%;
     width: 80%;
 
@@ -345,9 +355,6 @@ h3{
     margin-bottom: 2%;
 }
 
-#boxForAreYouNext p{
-    color: white;
-}
 
 #burger{
     margin-right: 25px;
@@ -359,7 +366,7 @@ h3{
 #ourVisionGridWrapper{
     display: grid;
     grid-template-columns: 7fr 1fr;
-    grid-template-rows: 10vh 70vh 90vh 60vh 90vh 60vh 25vh 20vh;
+    grid-template-rows: 70px 500px 700px 400px 700px 400px 200px 145px;
     grid-template-areas: 
     "he na"
     "ova1 ova1"
@@ -389,7 +396,7 @@ h3{
 
 #ourVisionTitle{
     position: absolute;
-    font-size: 35px;
+    font-size: 30px;
     background-color: rgb(13, 56, 74,0.5);
     border-radius: 5px;
 }
@@ -417,7 +424,6 @@ h3{
 .ourVisionBoxes p{
     margin-top: 5%;
     width:75%;
-    font-size: 17px;
 }
 
 .ourVisionBoxes h2{
@@ -442,6 +448,8 @@ h3{
 #ourVisionPicture3{
     background-image: url(../img/picture_of_people_in_class.jpg);
     border: none;
+    background-position: center;
+    background-size: cover;
 }
 
 #ourVisionArticle6{
@@ -462,21 +470,18 @@ h3{
 .ourVisionsummerCampPictures{
     width: 90%;
     height: 27%;
+    background-position: center;
+    background-size: cover;
 }
 
 #ourVisionPicture4{
     background-image: url(../img/picture_of_teens_walking_on_campus.jpg);
-    background-position-x: -100px;
 }
 #ourVisionPicture5{
     background-image: url(../img/picture_of_teen_pitching.jpg);
-    background-position: -245px;
-
 }
 #ourVisionPicture6{
     background-image: url(../img/picture_of_group_of_teens.jpg);
-    background-position: center;
-
 }
 
 #ourVisionSummerCampBox{
@@ -496,7 +501,7 @@ h3{
 #hireUsGridWrapper{
     display: grid;
     grid-template-columns: 7fr 1fr;
-    grid-template-rows: 10vh 80vh 15vh 60vh 5vh 60vh 5vh 60vh 10vh 15vh 5vh 15vh 5vh 15vh 5vh 15vh 5vh 20vh ;
+    grid-template-rows: 70px 480px 90px 530px 40px 530px 40px 530px 100px 100px 40px 100px 40px 100px 40px 100px 40px 145px;
     grid-template-areas: 
     "he na"
     "hsa2 hsa2"
@@ -557,7 +562,7 @@ h3{
 #hireUsQuoteBox h2{
     margin-top: 5%;
     width:75%;
-    font-size: 50px;
+    font-size: 50px;    
 }
 
 #hireUsArticle3{
@@ -581,6 +586,10 @@ h3{
     grid-area: hsa6;
 }
 
+#hireUsArticle6 h2{
+    font-size: 30px;
+}
+
 #hireUsArticle7{
     grid-area: hsa7;
 }
@@ -595,7 +604,8 @@ h3{
 
 .hireUsTextBox{
     width: 80%;
-    height: 95%;   
+    /* height: auto;  hej leo detta är en kommentar för att hitta vad jag ville prata om AUTO eller INTE */
+    height: 95%;
     border: solid white 2px;
     background-color: rgb(0, 0, 0, 0.2);
     display: flex;
@@ -609,7 +619,7 @@ h3{
 
 .hireUsTeamBox{
     width: 80%;
-    height: 95%;   
+    height: 95%;
     border: solid white 2px;
     background-color: rgb(0, 0, 0, 0.2);
     display: flex;
@@ -620,17 +630,22 @@ h3{
 .hireUsTeamText{
     font-size: 15px;
     margin-top: 1%;
+    color:rgb(180, 238, 241)
 }
-
 
 .hireUsTextBox p{
     margin-top: 5%;
     width: 85%;
-    font-size: 15px;
+    font-size: auto
 }
 
 #hireUsArticle10{
     grid-area: hsa10;
+}
+
+#hireUsArticle10 h2{
+    font-size: 30px;
+    
 }
 
 #hireUsArticle11{
@@ -672,6 +687,7 @@ h3{
     font-weight: bold;
     font-size: 15px;
     text-transform: uppercase;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
 .linkListVisible{
@@ -702,12 +718,12 @@ h3{
     #landingGridWrapper{
         display: grid;
         grid-template-columns: minmax(360px,1fr) minmax(360px,1fr) minmax(360px,1fr);
-        grid-template-rows: 15vh 105vh 15vh 90vh 10vh 20vh;
+        grid-template-rows: 108px 756px 108px 648px 72px 145px;
         grid-template-areas: 
         "he na na"
         "ar1I ar1I ar1I"
         "ar5I ar5I ar5I"
-        "ar2I ar3I ar4I"
+            "ar2I ar3I ar4I"
         ".. .. .."
         "fo fo fo"
         ;
@@ -737,7 +753,6 @@ h3{
         height: 15vh;
         z-index: 0;
         position:static;
-        background-color: none;
     }
 
     #linkList a{     
@@ -760,7 +775,6 @@ h3{
     
     }
     #footerSection2 h3{
-        font-size: 18px;
         margin-top: 0%;
     }
 
@@ -772,7 +786,7 @@ h3{
     #ourTeamGridWrapper{
         display: grid;
         grid-template-columns: minmax(360px,1fr) minmax(360px,1fr) minmax(360px,1fr) ;
-        grid-template-rows: min(15vh) 20vh 120vh 10vh 120vh 10vh 120vh 22vh;
+        grid-template-rows: 108px 140px 750px 60px 750px 60px 750px 145px;
         grid-template-areas: 
         "he na na"
         " oths oths oths"
@@ -808,14 +822,10 @@ h3{
         height: 20%;
     }
 
-    #boxForAreYouNext p{
-        color: white;
-    }
-
     #ourVisionGridWrapper{
         display: grid;
         grid-template-columns: minmax(180px,1fr) minmax(180px,1fr) minmax(180px,1fr) minmax(180px,1fr) minmax(180px,1fr) minmax(180px,1fr);
-        grid-template-rows: 15vh 90vh 10vh 105vh 5vh 105vh 5vh 85vh 50vh 22vh;
+        grid-template-rows: 108px 650px 60px 550px 40px 550px 40px 550px 250px 145px;
         grid-template-areas: 
         "he he na na na na"
         "ova1 ova1 ova1 ova1 ova1 ova1"
@@ -835,15 +845,11 @@ h3{
         width: 100%;
         height: 100%;
         background-size: cover;
-        background-position-y: -100px;
-    }
-
-    .ourVisionBoxes p{
-        font-size: 20px;
+        background-position: center;
     }
 
     .ourVisionBoxes h2{
-        font-size: 32px;
+        font-size: 30px;
     }
 
     #ourVisionArticle6{
@@ -880,8 +886,8 @@ h3{
     } 
 
     #hireUsGridWrapper{
-        grid-template-columns: minmax(360px,1fr) minmax(360px,1fr) minmax(360px,1fr);
-        grid-template-rows: 15vh 90vh 5vh 80vh 20vh 20vh 20vh 20vh 5vh 22vh;
+        grid-template-columns: minmax(385px,1fr) minmax(385px,1fr) minmax(385px,1fr);
+        grid-template-rows: 108px 648px 36px 500px 130px 130px 130px 130px 36px 145px;
         grid-template-areas: 
         "he na na"
         "hsa1 hsa2 hsa2"
@@ -901,12 +907,7 @@ h3{
     }
 
     .hireUsTextBox h3{
-        font-size: 16px;
         margin-top: 1%;
-    }
-
-    .hireUsTextBox p{
-        font-size: 16px;
     }
 
     #hireUsContinueText{
