@@ -192,7 +192,7 @@ nav{
 #ourTeamGridWrapper{
     display: grid;
     grid-template-columns: 7fr 1fr;
-    grid-template-rows: 70px 60px 700px 60px 700px 60px 700px 60px 700px 60px 700px 60px 700px 60px 700px 60px 700px 250px 145px;
+    grid-template-rows: 80px 60px 700px 60px 700px 60px 700px 60px 700px 60px 700px 60px 700px 60px 700px 60px 700px 250px 145px;
     grid-template-areas:    
     "he na"
     "oths oths"
@@ -366,7 +366,7 @@ h3{
 #ourVisionGridWrapper{
     display: grid;
     grid-template-columns: 7fr 1fr;
-    grid-template-rows: 70px 500px 700px 400px 700px 400px 200px 145px;
+    grid-template-rows: 80px 500px 700px 400px 700px 400px 200px 145px;
     grid-template-areas: 
     "he na"
     "ova1 ova1"
@@ -428,7 +428,7 @@ h3{
 
 .ourVisionBoxes h2{
     margin-top: 7% ;
-    font-size: 29px;
+    font-size: 30px;
 }
 
 #ourVisionArticle3{
@@ -458,8 +458,7 @@ h3{
     width: 0%;
     height: 0%;
     position:absolute;
-    top: -200px
-
+    top: -200px;
 }
 
 #ourVisionArticle7{
@@ -501,7 +500,7 @@ h3{
 #hireUsGridWrapper{
     display: grid;
     grid-template-columns: 7fr 1fr;
-    grid-template-rows: 70px 480px 90px 530px 40px 530px 40px 530px 100px 100px 40px 100px 40px 100px 40px 100px 40px 145px;
+    grid-template-rows: 80px 480px 90px 530px 40px 530px 40px 530px 90px 100px 40px 100px 40px 100px 40px 100px 40px 145px;
     grid-template-areas: 
     "he na"
     "hsa2 hsa2"
@@ -552,7 +551,7 @@ h3{
     display: flex;
     flex-direction: column;
     width: 90%;
-    height: 90%;
+    height: auto;
     background-color: rgb(0, 0, 0, 0.2);
     border: solid 2px white;
     align-items: center;
@@ -604,7 +603,6 @@ h3{
 
 .hireUsTextBox{
     width: 80%;
-    /* height: auto;  hej leo detta är en kommentar för att hitta vad jag ville prata om AUTO eller INTE */
     height: 95%;
     border: solid white 2px;
     background-color: rgb(0, 0, 0, 0.2);
@@ -870,7 +868,7 @@ h3{
     }
 
     .ourVisionsummerCampPictures{
-        width: 27%;
+        width: 27%; 
         height: 90%;
     }
 
